@@ -138,17 +138,18 @@ class Scraper:
     """
     def add_records(self, table, new_items):
         if len(self.new_items) == 0:
-            return f"No new items to add, Stopping the add_records function..."
-        for record in self.new_items:
-            item = {
-                "Id":record["Id"],
-                "Company":record["Company"],
-                "Location":record["Location"],
-                "Notes":record["Notes"],
-                "URL":record["URL"]
-            }
-            print(f"Now adding the item {item}")
-            table.put_item(Item=item)
+            return f"No new items to add, Moving on..."
+        else:
+            for record in self.new_items:
+                item = {
+                    "Id":record["Id"],
+                    "Company":record["Company"],
+                    "Location":record["Location"],
+                    "Notes":record["Notes"],
+                    "URL":record["URL"]
+                }
+                print(f"Now adding the item {item}")
+                table.put_item(Item=item)
         return f"Finished updating the table {table.name}"
 
     """
@@ -200,8 +201,9 @@ class Scraper:
                 print(f"Item {posting} is new, adding to db")
                 self.new_items.append(posting)
         if len(self.new_items) == 0:
-            return "No new items to add today"
-        return f"We have new items to add, items are {json.dumps(self.new_items,indent=4)}"
+            return "No new items to add today..."
+        items_to_add = self.new_items
+        return items_to_add
 
         
 
@@ -243,20 +245,3 @@ class Scraper:
                 }
         )
         return f"Table {table} was created "
-
-        
-
-    
-
-if __name__ == "__main__":
-    scraper = Scraper()
-    response = scraper.get_url()
-    postings = scraper.start_scraper(response)
-    # print(scraper.create_table("internships_swe","Company"))
-    table = scraper.connect_to_db_table("internships_swe")
-    print(scraper.check_size_of_table(table))
-    new_items = scraper.check_for_duplicates(table, postings)
-    print(scraper.add_records(table, new_items))
-    print(scraper.query_records(table, record="Viasat"))
-    # print(scraper.query_records(table, 20))
-    scraper.driver.quit()
