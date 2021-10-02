@@ -6,7 +6,7 @@
 ### 4. If no other new postings - sends the message that there are no new postings.
 
 
-#### Resources
+### Resources
 #### Summer Internships - https://github.com/pittcsc/Summer2022-Internships
 #### Slack API - https://api.slack.com/legacy/custom-integrations
 #### AWS DynamoDB - https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html
