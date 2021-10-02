@@ -13,7 +13,7 @@ def main():
     print(scraper.check_size_of_table(table))
     new_items = scraper.check_for_duplicates(table, postings)
     print(scraper.add_records(table, new_items))
-    send_results("Finished scraping, here's the results...")
+    send_results("Finished scraping, here's the new results...")
     send_results(json.dumps(new_items,indent=4))
     scraper.driver.quit()
 
