@@ -1,4 +1,4 @@
-# Slack bot that scrapes a webpage, and returns the new internship job postings
+# Internship Scraper
 ### This application runs daily at 8AM via CRONJOB and does the following
 ### 1. Scrapes the webpage - https://github.com/pittcsc/Summer2022-Internships <- Thank you to the students who maintain this repo
 ### 2. Checks to see if there are any new postings, if so it adds it to the DynamoDB that is set up (AWS Free Tier)
