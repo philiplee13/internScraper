@@ -11,3 +11,10 @@
 #### Summer Internships - https://github.com/pittcsc/Summer2022-Internships
 #### Slack API - https://api.slack.com/legacy/custom-integrations
 #### AWS DynamoDB - https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html
+
+#### This is what it'll look like when adding new records
+![image](https://user-images.githubusercontent.com/55965440/135736716-1aa0b39c-6c2c-407f-a9ee-0a81bafe7f10.png)
+
+#### vs. when there are no new records to add
+![image](https://user-images.githubusercontent.com/55965440/135736724-a9c9d668-75fa-46d9-b081-90a2c7f0faf3.png)
+
