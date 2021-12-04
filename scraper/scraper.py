@@ -6,7 +6,6 @@ import boto3
 from boto3.dynamodb.conditions import Key
 import json
 
-PATH = "/Users/philiplee/Desktop/Personal Projects"
 
 """
 This will be the Scraper class that includes all of the functions from
