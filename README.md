@@ -1,4 +1,5 @@
 # Internship Scraper
+## As of 12/06/21 - This project only runs locally - if there's enough requests / PRs to make this host this on a server, I can work on that. Please submit a PR if interested!<br><br>
 ### This application runs daily at 8AM via CRONJOB and does the following
 ### 1. Scrapes the webpage - https://github.com/pittcsc/Summer2022-Internships
 #### Thank you to the students who maintain this repo!!
